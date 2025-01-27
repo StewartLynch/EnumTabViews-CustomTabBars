@@ -1,6 +1,6 @@
 # Enum TabViews and Custom TabBars
 
-![mac128](Images/mac128.png) This is the completed source code for the.enum TabViews video
+![mac128](Images/mac128.png) This is the completed source code for Custom TabBars video
 
 
 
