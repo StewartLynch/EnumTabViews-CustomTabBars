@@ -16,21 +16,25 @@
 
 import SwiftUI
 
-struct WineList: View {
+struct Directions: View {
     var body: some View {
         NavigationStack{
-            Image(systemName: "wineglass")
-                .resizable()
-                .scaledToFit()
-                .padding(40)
-            Text("Wine List")
-                .font(.largeTitle)
-                .bold()
-                .navigationTitle("Wone List")
+            VStack{
+                Image(systemName: "map")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(40)
+                    .frame(height: 400)
+                Text("Directions")
+                    .font(.largeTitle)
+                    .bold()
+                    .navigationTitle("Directions")
+                Spacer()
+            }
         }
     }
 }
 
 #Preview {
-    WineList()
+    Directions()
 }
