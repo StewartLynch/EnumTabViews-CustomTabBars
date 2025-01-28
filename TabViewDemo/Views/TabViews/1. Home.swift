@@ -13,24 +13,27 @@
 // Copyright © 2025 CreaTECH Solutions. All rights reserved.
 
 
-
 import SwiftUI
 
-struct Directions: View {
+struct Home: View {
     var body: some View {
         NavigationStack{
-            Image(systemName: "map")
-                .resizable()
-                .scaledToFit()
-                .padding(40)
-            Text("Directions")
-                .font(.largeTitle)
-                .bold()
-                .navigationTitle("Directions")
+            VStack {
+                Image(systemName: "house")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(40)
+                    .frame(height: 400)
+                Text("Home")
+                    .font(.largeTitle)
+                    .bold()
+                    .navigationTitle("Welcome")
+                Spacer()
+            }
         }
     }
 }
 
 #Preview {
-    Directions()
+    Home()
 }
