@@ -17,6 +17,7 @@ import SwiftUI
 
 struct PurchaseView: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(Router.self) var router
     @Binding var total: Int
     var body: some View {
         NavigationStack {
@@ -44,6 +45,11 @@ struct PurchaseView: View {
                         Image(systemName: "plus.circle.fill")
                     }
                 }
+                Button("Go Home") {
+                    router.selectedTab = .home
+                    dismiss()
+                }
+                .buttonStyle(.bordered)
             }
             .font(.largeTitle)
             .navigationTitle("Purchase Screen")
@@ -64,4 +70,5 @@ struct PurchaseView: View {
 #Preview {
     @Previewable @State var total = 0
         PurchaseView(total: $total)
+        .environment(Router())
 }
