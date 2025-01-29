@@ -15,18 +15,29 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct StartTab: View {
+    @State private var router = Router()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $router.selectedTab) {
+            ForEach(TabViewEnum.allCases) { tab in
+                let tabItem = tab.tabItem
+                Tab(
+                    tabItem.name,
+                    systemImage: tabItem.systemImage,
+                    value: tab) {
+                        tab
+                    }
+            }
         }
-        .padding()
+        .environment(router)
     }
 }
 
 #Preview {
-    ContentView()
+    StartTab()
+}
+
+@Observable
+class Router {
+    var selectedTab: TabViewEnum = .home
 }

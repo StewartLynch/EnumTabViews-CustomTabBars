@@ -1,7 +1,7 @@
 //
 //----------------------------------------------
 // Original project: TabViewDemo
-// by  Stewart Lynch on 2025-01-26
+// by  Stewart Lynch on 2025-01-28
 //
 // Follow me on Mastodon: @StewartLynch@iosdev.space
 // Follow me on Threads: @StewartLynch (https://www.threads.net)
@@ -13,13 +13,9 @@
 // Copyright © 2025 CreaTECH Solutions. All rights reserved.
 
 
-import SwiftUI
+import Foundation
 
-@main
-struct TabViewDemoApp: App {
-    var body: some Scene {
-        WindowGroup {
-            StartTab()
-        }
-    }
+struct TabItem {
+    let name: String
+    let systemImage: String
 }
