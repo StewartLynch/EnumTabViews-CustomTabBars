@@ -13,9 +13,10 @@
 // Copyright © 2025 CreaTECH Solutions. All rights reserved.
 
 
-import Foundation
+import SwiftUI
 
 struct TabItem {
     let name: String
     let systemImage: String
+    var color: Color
 }
