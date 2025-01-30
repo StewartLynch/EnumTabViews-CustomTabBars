@@ -41,10 +41,10 @@ struct StartTab: View {
         .environment(router)
         .safeAreaInset(edge: .bottom) {
 //            CustomTabBar(selectedTab: $router.selectedTab)
-//            SemiCircleTabBar(selectedTab: $router.selectedTab)
-            VerticalRevealTabBar(selectedTab: $router.selectedTab)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .padding(.trailing)
+            SemiCircleTabBar(selectedTab: $router.selectedTab)
+//            VerticalRevealTabBar(selectedTab: $router.selectedTab)
+//                .frame(maxWidth: .infinity, alignment: .trailing)
+//                .padding(.trailing)
         }
     }
 }
