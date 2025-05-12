@@ -28,7 +28,7 @@ struct WineList: View {
                 Text("Wine List")
                     .font(.largeTitle)
                     .bold()
-                    .navigationTitle("Wone List")
+                    .navigationTitle("Wine List")
                 Spacer()
             }
         }
